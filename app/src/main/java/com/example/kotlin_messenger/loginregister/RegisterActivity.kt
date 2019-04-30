@@ -78,6 +78,10 @@ class RegisterActivity : AppCompatActivity() {
         referance.setValue(user)
             .addOnSuccessListener {
                 Log.d("RegisterAcvtivity","user saved to firebase db")
+
+                val intent = Intent(this,LastMessageActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
 
     }
@@ -140,5 +144,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    class User (val uid: String, val username: String, val profileImageUrl: String )
+    class User (val uid: String, val username: String, val profileImageUrl: String ){
+        constructor( ) : this("","","")
+    }
 }
