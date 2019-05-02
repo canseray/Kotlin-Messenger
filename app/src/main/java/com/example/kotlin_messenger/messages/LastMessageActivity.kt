@@ -1,11 +1,12 @@
-package com.example.kotlin_messenger
+package com.example.kotlin_messenger.messages
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.kotlin_messenger.R
+import com.example.kotlin_messenger.loginregister.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LastMessageActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class LastMessageActivity : AppCompatActivity() {
 
         when (item?.itemId){
             R.id.menu_new_message -> {
-                val intent = Intent(this,NewMessageActivity::class.java)
+                val intent = Intent(this, NewMessageActivity::class.java)
                 startActivity(intent)
             }
             R.id.menu_sign_out -> {

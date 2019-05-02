@@ -1,10 +1,11 @@
-package com.example.kotlin_messenger
+package com.example.kotlin_messenger.loginregister
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.example.kotlin_messenger.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun BackRegistration (view: View){
 
-        val intent = Intent(this,RegisterActivity::class.java)
+        val intent = Intent(this, RegisterActivity::class.java)
 
     }
 }
